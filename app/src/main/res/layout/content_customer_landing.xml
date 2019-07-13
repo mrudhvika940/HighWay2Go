@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:textAlignment="viewStart"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="app.com.example.cruck.h2g.signup.ServiceUserPostSignUp"
+    tools:showIn="@layout/service_user_landing">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#29aab8"
+        android:backgroundTint="#28b3c2"
+        android:backgroundTintMode="multiply"
+        android:fitsSystemWindows="true"
+        android:minHeight="?attr/actionBarSize"
+        android:orientation="vertical"
+        android:paddingBottom="14dp"
+        android:paddingTop="92dp"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/toolbar"
+        android:layout_alignStart="@+id/toolbar"
+        android:layout_alignTop="@+id/toolbar"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+            <TextView
+                android:id="@+id/welcome1"
+                android:layout_width="372dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.60"
+                android:paddingLeft="90dp"
+                android:paddingTop="30dp"
+                android:text="WELCOME NAME"
+                android:textColor="#ffffff"
+                android:textColorHighlight="#ffffff"
+                android:textSize="@dimen/abc_dialog_padding_material" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignStart="@+id/toolbar"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical"
+        android:weightSum="1">
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingTop="16dp"
+            android:text="Select your Highway"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+        <NumberPicker
+            android:id="@+id/highwayNum"
+            android:layout_width="112dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#eb7d7d"
+            android:backgroundTintMode="multiply"
+            android:baselineAligned="true"
+            android:contentDescription="@string/abc_searchview_description_clear"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:textAlignment="gravity" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTintMode="multiply">
+            <Button
+                android:id="@+id/search1"
+                android:layout_width="127dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#29aab8"
+                android:backgroundTint="#28b3c2"
+                android:fontFamily="@string/abc_searchview_description_search"
+                android:fontFeatureSettings="@string/abc_searchview_description_search"
+                android:singleLine="false"
+                android:text="SEARCH"
+                android:textColor="#ffffff"
+                android:textColorHighlight="#ffffff" />
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:weightSum="1">
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="396dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.11"
+                android:paddingLeft="5dp"
+                android:text="Available Services"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+            <ListView
+                android:id="@+id/listhigh"
+                android:layout_width="match_parent"
+                android:layout_height="196dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_alignParentTop="true" />-->
+</RelativeLayout>
